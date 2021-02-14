@@ -1,0 +1,37 @@
+<!-- ALWAYS MAKE A HOST DIV I SWEAR TO GOD -->
+<!-- There are WAY too many people that just target :host -->
+<div class="login-component" [formGroup]="form">
+  
+  <!-- use your classes in Angular to describe what things are -->
+  <mat-form-field class="email control">
+    <mat-label class="label">Enter your email</mat-label>
+    <input
+      matInput
+      type="email"
+      autocomplete="email"
+      [attr.data-some-tracker]="'login-email-field'"
+      formControlName="email"
+      >
+  </mat-form-field>
+
+  <!-- use your classes in Angular to describe what things are -->
+  <mat-form-field class="password control">
+    <mat-label class="label">Enter your password</mat-label>
+    <input
+      matInput
+      type="password"
+      autocomplete="password"
+      [attr.data-some-tracker]="'login-password-field'"
+      formControlName="password"
+      >
+  </mat-form-field>
+  
+  <button matButton class="submit" (click)="submitPressed()">
+    Login
+  </button>
+
+  <button matButton class="reset-password" (click)="resetPressed()">
+    Reset Password
+  </button>
+  
+</div>

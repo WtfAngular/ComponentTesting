@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormField } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 // Do a barrel roll -- Roll up all the "everyone uses this" modules, and export them
@@ -17,7 +19,9 @@ import { MatInputModule } from '@angular/material/input';
 
 const MaterialModules = [
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
+  MatFormField,
+  MatSnackBarModule,
 ];
 
 @NgModule({
